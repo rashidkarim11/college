@@ -1,0 +1,386 @@
+/* College listing page container */
+#header {
+    color:rgb(161, 102, 41)
+}
+h4{
+    color: rgb(161, 102, 47);
+}
+
+/* College listing page container */
+.college-list-page {
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(226,196,121);
+}
+
+/* Grid layout for exactly 10 colleges */
+.college-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);  /* 5 columns */
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Individual college card */
+.college-card {
+    background-color: rgb(173, 216, 230);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Hover effect for cards */
+.college-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* College image styling */
+.college-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* College name */
+.college-card h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* College location text */
+.college-card p {
+    font-size: 1em;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+/* Add to Dashboard button */
+.college-card button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s;
+}
+
+/* Button hover effect */
+.college-card button:hover {
+    background-color: #0056b3;
+}
+
+.pagination-controls {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination-controls button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.pagination-controls button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination-controls button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+.pagination-controls span {
+    font-size: 1.2em;
+    margin: 0 10px;
+}
+
+
+/* Responsive design for larger screens: Default to 5 columns */
+@media (min-width: 1200px) {
+    .college-grid {
+        grid-template-columns: repeat(5, 1fr);  /* 5 columns for 10 colleges in 2 rows */
+    }
+}
+
+/* Responsive design for medium screens: 2 columns */
+@media (max-width: 1199px) and (min-width: 768px) {
+    .college-grid {
+        grid-template-columns: repeat(2, 1fr);  /* 2 columns */
+    }
+}
+
+/* Responsive design for small screens: 1 column */
+@media (max-width: 767px) {
+    .college-grid {
+        grid-template-columns: 1fr;  /* Single column for mobile */
+    }
+}
+
+/* Optional: Different style for the "Go to First Page" button */
+.pagination-controls button:nth-child(3):hover {
+    background-color: #28a745;  /* Green for 'Go to First Page' */
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.modal-content img {
+    max-width: 100%;   /* Ensure the image fits within the modal width */
+    max-height: 300px; /* Set a maximum height to prevent it from being too tall */
+    object-fit: contain; /* Ensures the image is scaled while preserving aspect ratio */
+    display: block;    /* Center image if you want it centered */
+    margin: 0 auto;    /* Add margin to center image */
+}
+
+/*dropdown state filter*/
+.state-filter {
+    position: relative;
+    display: inline-block;
+    margin: 20px 0;
+}
+
+.state-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.state-dropdown {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 200px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;  /* Allows scrolling if the list of states is too long */
+    z-index: 1000;     /* Ensure it appears above other elements */
+}
+
+.state-dropdown li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.state-dropdown li:hover {
+    background-color: #f1f1f1;
+}
+
+.filter-button {
+    background-color: #28a745;
+    width: 5rem;
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    /* Position the button in the top-right corner */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000; /* Ensure the button is above other elements */
+}
+
+.filter-button:hover {
+    background-color: #218838;
+}
+
+.filter-options {
+    background-color: #f8f9fa;  /* Light background for contrast */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+    position: absolute;
+    top: 60px;  /* Adjust based on button placement */
+    right: 20px;
+    width: 250px;  /* Fixed width for the dropdown */
+    z-index: 999;
+}
+
+.filter-item {
+    margin-bottom: 15px;  /* Space between each filter option */
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(173, 216, 230);
+}
+
+.filter-item label {
+    font-weight: 600;  /* Bold labels for better readability */
+    margin-bottom: 5px;
+    color: rgb(161, 102, 41);  /* Dark gray for the label text */
+}
+
+.filter-item input,
+.filter-item select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.filter-item input:focus,
+.filter-item select:focus {
+    border-color: #28a745;  /* Green border on focus */
+}
+
+.filter-options::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    border-width: 0 10px 10px 10px;
+    border-style: solid;
+    border-color: transparent transparent #f8f9fa transparent;  /* Small arrow above the dropdown */
+}
+
+.filter-button {
+    background-color: #28a745;
+    width: 5rem;
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.filter-button:hover {
+    background-color: #218838;
+}
+.filter-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px; /* Add space between min and max fields */
+    margin-bottom: 15px; /* Add space between groups */
+}
+
+.filter-group label {
+    font-weight: 600;
+    color: #343a40;
+}
+
+.filter-group input {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    font-size: 1rem;
+    width: 100%; /* Make inputs fill their container */
+}
+
+.filter-group input:focus {
+    border-color: #28a745; /* Green border on focus */
+}
+
+.filter-options {
+    background-color: rgb(77, 126, 170);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 250px;
+    z-index: 999;
+}
+
+.filter-button {
+    background-color: #28a745;
+    width: 5rem;
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed;
+    top: 60px;
+    right: 27px;
+    z-index: 1000;
+}
+
+.filter-button:hover {
+    background-color: #218838;
+}
+
+/* Toolbar navigation styling */
+.navbar {
+    background-color: #333;  /* Dark background for the navbar */
+    overflow: hidden;  /* Prevents overflow if there are many links */
+    padding: 10px 0;  /* Padding for vertical space */
+  }
+  
+  .nav-links {
+    list-style-type: none;  /* Remove default bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex;  /* Display links horizontally */
+    justify-content: center;  /* Center the navigation bar */
+  }
+  
+  .nav-links li {
+    margin-right: 20px;  /* Space between the links */
+  }
+  
+  .nav-links a {
+    color: white;  /* Link text color */
+    text-align: center;  /* Center text inside each link */
+    padding: 14px 16px;  /* Padding around the links */
+    text-decoration: none;  /* Remove underlines */
+    font-size: 16px;  /* Font size for the links */
+  }
+  
+  .nav-links a:hover {
+    background-color: #575757;  /* Change background on hover */
+    border-radius: 4px;  /* Optional: round the edges of hover state */
+  }
+  

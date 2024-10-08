@@ -1,0 +1,173 @@
+.main-title{
+    color: #1a73e8;
+}
+
+.welcome{
+    color: #1a73e8;
+}
+
+.registration-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #e0f7ff, #ffefdb); /* Light blue and light orange gradient */
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+.title-section {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1a73e8; /* Blue for the title text */
+}
+
+.buzzwords-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin: 30px 0;
+    max-width: 1200px;
+}
+
+/* Group buzzwords on each side */
+.buzzword-group {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Centering the image and making it more prominent */
+.buzzword-image-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.buzzword-image {
+    width: 250px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Buzzword container */
+.buzzword-container {
+    text-align: center;
+    max-width: 300px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: transform 0.3s ease;
+    border: 2px solid #ffa64d; /* Light orange border */
+}
+
+.buzzword-container:hover {
+    transform: translateY(-10px);
+}
+
+.buzzword-shape {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1a73e8; /* Blue for the buzzword shape */
+    margin-bottom: 10px;
+}
+
+.buzzword-description {
+    font-size: 16px;
+    color: #4d4d4d; /* Darker gray for better readability */
+}
+
+/* Register section */
+.register-section {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.register-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ffa64d; /* Light orange for section heading */
+}
+
+/* Call-to-action banner */
+.cta-banner {
+    background-color: #1a73e8; /* Blue background */
+    color: white;
+    font-size: 24px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 40px 0;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/*.cta-banner:hover {
+    /*background-color: #155ab2; /* Darker blue on hover */
+/*}
+
+/* FAQ section */
+.faq-section {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ffa64d; /* Light orange border for FAQ items */
+}
+
+.faq-item h3 {
+    color: #1a73e8; /* Blue for FAQ headers */
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 16px;
+    color: #4d4d4d; /* Darker gray for text */
+}
+.homepage-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+}
+
+.login-button-container {
+    position: absolute;
+    top: 0px; /* Adjusted to move the button higher up */
+    right: 10px;
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login-button {
+    position: absolute;
+    top: 0px;
+    padding: 15px 50px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: auto;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+}
+
+.welcome {
+    margin-top: 40px;
+    font-size: 2.5rem;
+}

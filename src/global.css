@@ -1,0 +1,278 @@
+/* Import Stolzl Fonts */
+@font-face {
+  font-family: 'Stolzl';
+  src: url('/src/assets/fonts/stozl/stolzl_regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Stolzl';
+  src: url('/src/assets/fonts/stozl/stolzl_bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Stolzl';
+  src: url('/src/assets/fonts/stozl/stolzl_light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Stolzl';
+  src: url('/src/assets/fonts/stozl/stolzl_medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Stolzl';
+  src: url('/src/assets/fonts/stozl/stolzl_book.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Stolzl';
+  src: url('/src/assets/fonts/stozl/stolzl_thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* Import Euclid Circular A Fonts */
+@font-face {
+  font-family: 'Euclid Circular A';
+  src: url('/src/assets/fonts/euclid/Euclid Circular A Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Euclid Circular A';
+  src: url('/src/assets/fonts/euclid/Euclid Circular A Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Euclid Circular A';
+  src: url('/src/assets/fonts/euclid/Euclid Circular A Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Euclid Circular A';
+  src: url('/src/assets/fonts/euclid/Euclid Circular A Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Euclid Circular A';
+  src: url('/src/assets/fonts/euclid/Euclid Circular A SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Apply default fonts globally */
+body {
+  font-family: 'Euclid Circular A', sans-serif;
+  color: #363538;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Stolzl', sans-serif;
+  color: #363538;
+}
+
+/* Additional utility classes for custom usage */
+.title-font {
+  font-family: 'Stolzl', sans-serif;
+  color: #363538;
+}
+
+.text-font {
+  font-family: 'Euclid Circular A', sans-serif;
+  color: #363538;
+}
+
+/* Specific font-weight utility classes */
+.font-bold {
+  font-weight: 700;
+  color: #363538;
+}
+
+.font-medium {
+  font-weight: 500;
+  color: #363538;
+}
+
+.font-light {
+  font-weight: 300;
+  color: #363538;
+}
+
+.font-thin {
+  font-weight: 100;
+  color: #363538;
+}
+
+.font-book {
+  font-weight: 600;
+  color: #363538;
+}
+
+.add-button {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border: 3px solid #e0f465;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 3px 3px 0px #95b5ba;
+  cursor: pointer;
+  font-family: 'Euclid Circular A', sans-serif;
+  gap: 0.5rem;
+  height: 40px;
+  margin-left: 5px;
+}
+
+.continue-button,
+.cancel-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 15px;
+  border-radius: 8px;
+  background-color: #fff;
+  cursor: pointer;
+  font-family: 'Euclid Circular A', sans-serif;
+  gap: 0.5rem;
+  transition: transform 0.25s ease;
+  transform-origin: center;
+  line-height: 1.5;
+}
+
+.continue-button {
+  border: 3px solid #e0f465;
+  box-shadow: 3px 3px 0px #95b5ba;
+  font-weight: 700;
+}
+
+.cancel-button {
+  border: 1px solid #95b5ba;
+}
+
+.skip-button {
+  background-color: #eaf0f1;
+  width: 100%;
+  padding: 15px 25px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  font-size: 1.2rem;
+  font-weight: 800;
+  justify-content: space-between;
+}
+
+.continue-button:hover,
+.cancel-button:hover,
+.add-button:hover,
+.skip-button:hover {
+  box-shadow: 5px 5px 0px #95b5ba;
+}
+
+input[type='text'],
+input[type='number'],
+input[type='email'],
+input[type='password'],
+input[type='tel'],
+select,
+textarea {
+  border-radius: 12px;
+  border: 1px solid #95b5ba;
+  transition: border-color 0.25s ease;
+  font-size: 0.9rem;
+}
+
+.react-tel-input .form-control.sign-input:focus,
+input[type='text']:focus,
+input[type='number']:focus,
+input[type='email']:focus,
+input[type='password']:focus,
+input[type='tel']:focus,
+select:focus,
+textarea:focus {
+  border: 1px solid #e0f465;
+  border-color: #e0f465;
+  outline: none;
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.radio-group input[type='radio'] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fff;
+  border: 1px solid #95b5ba;
+  padding: 9px;
+  display: inline-block;
+  position: relative;
+  border-radius: 3px; /* Makes it rectangular */
+  cursor: pointer;
+  outline: none;
+  width: 20px; /* Adjust the width to match checkbox size */
+  height: 20px; /* Adjust the height to match checkbox size */
+}
+
+.radio-group input[type='radio']:checked {
+  background-color: #e0f465;
+}
+
+.radio-group input[type='radio']:checked::after {
+  content: '✔'; /* Unicode character for checkmark */
+  color: #363538;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10px;
+}
+.required {
+  color: red;
+  font-weight: 900;
+}
+
+.\[\&\>h3\]\:step > h3:before {
+  position: absolute;
+  display: inline-flex;
+  height: 2.25rem;
+  width: 2.25rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+
+  text-align: center;
+  text-indent: -1px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New,
+    monospace;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  margin-left: -50px;
+  margin-top: -4px;
+}

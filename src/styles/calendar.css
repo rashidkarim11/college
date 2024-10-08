@@ -1,0 +1,67 @@
+.rbc-header {
+    color: rgb(252, 179, 42);
+    background-color: rgb(153, 239, 244);
+    height: 36px;
+    font: 14px;
+    align-items: center;
+    justify-content: center;
+}
+.rbc-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f5f5f5;       /* Optional: background for better visibility */
+    border-bottom: 1px solid #ddd;   /* Optional: Divider between toolbar and calendar */
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.rbc-toolbar button {
+    font-size: 12px;
+    padding: 5px 10px;
+    margin: 0 5px;  /* Space between the toolbar buttons */
+    background-color: brown;
+}
+
+.rbc-toolbar-label {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;   /* Allows the label to grow and stay centered */
+    white-space: nowrap;  /* Prevent label text from breaking into multiple lines */
+    margin: 0 10px;  /* Ensure there's some space between the label and the buttons */
+    background-color: plum;
+}
+
+.rbc-toolbar .rbc-btn-group {
+    display: flex;
+    justify-content: space-between;
+    min-width: 120px;  /* Ensures the buttons have enough space */
+    background-color: white;
+    
+}
+.rbc-btn-group button{
+    background-color: plum;
+}
+.rbc-calendar {
+    max-width: 1000px;  /* Increase width of the calendar to avoid overcrowding */
+    margin: 0 auto;
+    height: 500px !important;
+    position: relative;
+    top: 125px;
+    padding-top: 20px;
+    background-color: plum;
+}
+.rbc-toolbar {
+    flex-wrap: wrap;   /* Allow toolbar to wrap to the next line on small screens */
+    background-color: white;
+}
+
+/*.rbc-toolbar-label {
+    flex-grow: 1;
+    text-align: center;
+    margin: 5px 0;   /* Add margin to center the label better when wrapping */
+/*}
+
+  

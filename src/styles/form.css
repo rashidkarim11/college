@@ -1,0 +1,259 @@
+body {
+  background-color: rgb(240, 190, 128);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  background-color: rgb(255, 234, 210); /* Light color from the same palette */
+}
+
+.heading {
+  color: rgb(217, 128, 50); /* Darker orange from the color scheme */
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid rgb(217, 128, 50); /* Border matches the heading */
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: rgb(255, 244, 230); /* Light background for inputs */
+}
+
+.form-button {
+  width: 100%;
+  padding: 12px;
+  margin: 20px 0;
+  background-color: rgb(217, 128, 50); /* Button color adjusted */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.form-button:hover {
+  background-color: rgb(166, 98, 40); /* Darker hover color */
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+  visibility: hidden;
+}
+
+.error-message.visible {
+  visibility: visible;
+}
+
+.password-guidelines, .user-guidelines {
+  color: rgb(128, 85, 40); /* Subtle color for guidelines */
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.login-button, .register-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: rgb(217, 128, 50);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.login-button:hover, .register-button:hover {
+  background-color: rgb(166, 98, 40); /* Darker hover color */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgb(240, 190, 128), rgb(166, 98, 40)); /* Gradient based on body color */
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3em;
+  color: rgb(128, 85, 40); /* Adjusted text color for contrast */
+  margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: zoomIn 0.6s ease-in-out;
+}
+
+form {
+  background: rgba(255, 234, 210, 0.9); /* Transparent form background based on scheme */
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  animation: slideIn 0.8s ease-in-out;
+}
+
+label {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1em;
+  color: rgb(128, 85, 40); /* Text color for labels */
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid rgb(200, 20, 20); /* Border matches color scheme */
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-family: 'Poppins', sans-serif;
+  transition: border 0.3s ease;
+  background-color: rgb(255, 244, 230); /* Input background matches form */
+}
+
+input[type="text"]:focus {
+  border-color: rgb(200, 20, 20); /* Red border on focus */
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background: #fff; /* White background */
+  color: rgb(200, 20, 20); /* Red text based on the color scheme */
+  font-size: 1.2em;
+  border: 2px solid rgb(45, 2, 2); /* Red border */
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background: rgb(200, 20, 20); /* Red background on hover */
+  color: white; /* White text on hover */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark background for overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 350px;  /* Reduce modal width */
+  max-width: 90%;  /* Ensure responsiveness for smaller screens */
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;  /* Include padding in width calculations */
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
+/* Form styling */
+.modal-content form {
+  width: 100%;  /* Full width of the modal */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.modal-content form input {
+  width: 100%;  /* Full width of the form */
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;  /* Ensure padding is included in width */
+}
+
+.modal-content form button {
+  width: 100%;  /* Full width of the form */
+  padding: 10px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.modal-content form button:hover {
+  background-color: #2980b9;
+}
